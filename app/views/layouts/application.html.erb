@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+  <meta charset="utf-8">
+  <meta name="description" content="Get the best prices by direct wholesales 
+    buying. Members choose trending products and order them in groups, while 
+    eg4bb will organize purchases and delivery.">
+  <meta name="keywords" content="trending products, group of buyers, best price, buy">
+  <meta name="author" content="Zvonimir Kolumbic">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= render 'layouts/shim' %>
+</head>
+
+<body>
+
+  <%= render 'layouts/header' %>
+  <% flash.each do |message_type, message| %>
+    <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+  <% end %>
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+
+  <%= debug(params) if Rails.env.development? %>
+
+</body>
+</html>
