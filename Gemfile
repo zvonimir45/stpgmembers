@@ -3,6 +3,8 @@ ruby '2.4.3'                  # Ruby 2.4.2p198, 14 Dec 2017
 gem 'rails', '5.2.0'          # Full-stack web framework, Apr 09 2018
 gem 'bcrypt', '3.1.12'        # Hashing passwords, 16 May 2018
 gem 'faker', '1.9.1'          # Generate fake data, 11 Jul 2018
+gem 'carrierwave', '1.2.3'    # Upload files in your Ruby applications, 30 Jun 2018
+gem 'mini_magick',  '4.8.0'   # Manipulate images with minimum memory, 06 Jul 2017
 gem 'will_paginate', '3.1.6'  # Pagination, 07 Jun 2017
 gem 'bootstrap-will_paginate', '1.0.0'  # Pagination, 16 Apr 2017'
 gem 'sqlite3', '1.3.12'       # Interface with the SQLite3 database, 09 Oct 2016
@@ -29,5 +31,8 @@ end
 group :test do
   gem 'rails-controller-testing', '1.0.2'	  # Extracting from ActionDispatch, 17 May 2017
   gem 'minitest-reporters', '1.1.19'          # Extend Minitest, 22 Nov 2017
+end
+group :production do
+  gem 'fog', '2.0.0'  # The Ruby cloud services library, 06 Mar 2018
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby] # Zoneinfo file

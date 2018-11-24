@@ -15,3 +15,9 @@ User.create!([{name: "Zvonimir Kolumbic", email: "zvonimir.kolumbic1@ri.t-com.hr
                activated: true,
                activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(4)
+20.times do
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.microposts.create!(content: content) }
+end

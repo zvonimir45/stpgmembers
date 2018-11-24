@@ -1,6 +1,7 @@
 $light-gray: #777;
 $gray-medium-light: #eaeaea;
 $gray-lighter: #eee;
+$gray-light: #aaa;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -79,6 +80,15 @@ input, textarea, select, .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
+}
+
+.picture  input {
+  border: 1px solid #bbb;
+  padding: 2px;
+  label {
+    background-color: yellow
+  }
+  
 }
 
 input {
